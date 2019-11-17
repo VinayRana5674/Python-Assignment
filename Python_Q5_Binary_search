@@ -1,0 +1,17 @@
+import random
+random_list=[]
+random_list=list(range(1000))
+select_random_number=random.randint(0,1000)
+def binary_search(random_list,select_random_number):
+    first=0
+    last=len(random_list)-1
+    while(last>=first):
+        middle=int((first+last)/2)
+        if(random_list[middle]==select_random_number):
+            return middle
+        elif(select_random_number>random_list[middle]):
+            first=middle+1
+        else:
+            last=middle-1
+index_of_number=(binary_search(random_list,select_random_number))
+print(index_of_number)
