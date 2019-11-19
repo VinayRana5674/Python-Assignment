@@ -13,7 +13,7 @@ def insertdata():
             cursor=connection.cursor()
             cursor.execute('select database();')
             record=cursor.fetchone()
-            print("You are connected to ",record)####data taken from online source
+            print("You are connected to ",record)####data table taken from online source
         createtable="""CREATE TABLE IF NOT EXISTS products (
              productID    INT UNSIGNED  NOT NULL AUTO_INCREMENT,
              productCode  CHAR(3)       NOT NULL DEFAULT '',
